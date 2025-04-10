@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Управление преподавателями{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Форма регистрации -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Регистрация преподавателя</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Список преподавателей -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Список преподавателей</h3>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Фамилия</th>
+                                    <th>Имя</th>
+                                    <th>Отчество</th>
+                                    <th>Телефон</th>
+                                    <th>Email</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for teacher in teachers %}
+                                    <tr>
+                                        <td>{{ teacher.user.last_name }}</td>
+                                        <td>{{ teacher.user.first_name }}</td>
+                                        <td>{{ teacher.middle_name }}</td>
+                                        <td>{{ teacher.phone }}</td>
+                                        <td>{{ teacher.user.email }}</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-warning">Редактировать</button>
+                                            <button class="btn btn-sm btn-danger">Удалить</button>
+                                        </td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="6" class="text-center">Нет зарегистрированных преподавателей</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
