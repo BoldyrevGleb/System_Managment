@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b89d698-fb77-47f3-8a4c-662f8190d6bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SM.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SM/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SM/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SM/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SM/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SM/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +41,7 @@
     "Django Server.SM.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744284487122</updated>
-      <workItem from="1744284499939" duration="617000" />
+      <workItem from="1744284499939" duration="1335000" />
     </task>
     <servers />
   </component>
